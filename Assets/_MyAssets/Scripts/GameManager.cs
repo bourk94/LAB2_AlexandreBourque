@@ -72,4 +72,11 @@ public class GameManager : MonoBehaviour
         _accrochage = accrochages;
         _temps = temps;
     }
+
+    public void TerminerPartie()
+    {
+        Debug.Log("Temps de la partie : " + Time.time.ToString("f2"));
+        Debug.Log("Nombre d'obstacles touchés" + _accrochage);
+        Debug.Log("Score : " + Time.time.ToString("f2") + _accrochage);
+    }
 }

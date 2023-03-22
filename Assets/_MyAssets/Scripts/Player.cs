@@ -31,4 +31,10 @@ public class Player : MonoBehaviour
         Vector3 direction = new Vector3(positionX, 0f, positionZ);
         _rb.velocity = direction * Time.fixedDeltaTime * _vitesse;
     }
+
+    // Methode publiques
+    public void FinPartie()
+    {
+        this.gameObject.SetActive(false);
+    }
 }
