@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Drawing;
 using UnityEngine;
 
 public class GestionCollision : MonoBehaviour
@@ -10,7 +9,7 @@ public class GestionCollision : MonoBehaviour
     private bool _toucher;
     private float _delais = 3;
     private float _tempsDepart;
-    private UnityEngine.Color _color;
+    private Color _color;
 
 
     private void Start()
@@ -35,7 +34,7 @@ public class GestionCollision : MonoBehaviour
         {
             _color = gameObject.GetComponent<MeshRenderer>().material.color;
             _tempsDepart = Time.time;
-            gameObject.GetComponent<MeshRenderer>().material.color = UnityEngine.Color.red;
+            gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
             _gameManager.AugmenterPointage();
             _toucher = true;            
         }  
