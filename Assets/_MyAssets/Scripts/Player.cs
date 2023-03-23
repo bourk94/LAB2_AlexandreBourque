@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     //Attribut
     [SerializeField] private float _vitesse = 600;
-    private Vector3 _positionDepart = new Vector3(-44f, 0.98f, -44f);
+    [SerializeField] private Vector3 _positionDepart = new Vector3(-44f, 1f, -44f);
     private Rigidbody _rb;
 
     //Methodes privees
