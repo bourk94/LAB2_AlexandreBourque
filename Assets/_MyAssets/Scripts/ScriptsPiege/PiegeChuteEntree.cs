@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
-public class ChuteRoche : MonoBehaviour
+public class PiegeChuteEntree : MonoBehaviour
 {
     // Attributs
     private bool _estActive = false;
@@ -29,7 +30,6 @@ public class ChuteRoche : MonoBehaviour
                 rb.useGravity = true;
                 rb.AddForce(Vector3.down * _force);
             }
-
             _estActive = true;
         }
     }
