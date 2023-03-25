@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     private static void InstructionsDepart()
     {
         Debug.Log("Course à obstacles");
-        Debug.Log("Le but du jeu est d'atteindre la zone d'arrivée le plus rapidement possible");
+        Debug.Log("Le but du jeu est d'atteindre la zone d'arrivée le plus rapidement possible dans les 3 niveaux");
         Debug.Log("Chaque contact avec un obstable entraînera une pénalité de temps de 1 seconde");
     }
 
@@ -50,19 +50,17 @@ public class GameManager : MonoBehaviour
         _pointage++;
     }
 
-    // Accesseur qui retourne la valeur de l'attribut pointage
     public int GetPointage()
     {
         return _pointage;
     }
 
-    // Accesseur qui retourne le temps
-    public float GetTemps()
+    public float GetTempsNiv1()
     {
         return _temps;
     }
 
-    public int GetAccrochages()
+    public int GetAccrochagesNiv1()
     {
         return _accrochage;
     }
@@ -73,10 +71,35 @@ public class GameManager : MonoBehaviour
         _temps = temps;
     }
 
-    public void TerminerPartie()
+    public float GetTempsNiv2()
     {
-        Debug.Log("Temps de la partie : " + Time.time.ToString("f2"));
-        Debug.Log("Nombre d'obstacles touchés" + _accrochage);
-        Debug.Log("Score : " + Time.time.ToString("f2") + _accrochage);
+        return _temps;
+    }
+
+    public int GetAccrochagesNiv2()
+    {
+        return _accrochage;
+    }
+
+    public void SetNiveau2(int accrochages, float temps)
+    {
+        _accrochage = accrochages;
+        _temps = temps;
+    }
+
+    public float GetTempsNiv3()
+    {
+        return _temps;
+    }
+
+    public int GetAccrochagesNiv3()
+    {
+        return _accrochage;
+    }
+
+    public void SetNiveau3(int accrochages, float temps)
+    {
+        _accrochage = accrochages;
+        _temps = temps;
     }
 }

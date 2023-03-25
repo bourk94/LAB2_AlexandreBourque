@@ -7,7 +7,7 @@ public class GestionCollision : MonoBehaviour
     // Attributs
     private GameManager _gameManager;
     private bool _toucher;
-    private float _delais = 3;
+    private float _delais = 4;
     private float _tempsDepart;
     private Color _color;
 
